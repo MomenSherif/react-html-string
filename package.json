@@ -10,7 +10,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsup --watch",
-    "build": "tsup"
+    "build": "tsup",
+    "eslint:check": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0",
+    "eslint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0",
+    "prettier:check": "prettier . --check --ignore-unknown --ignore-path .gitignore",
+    "prettier:fix": "prettier . --write --ignore-unknown --ignore-path .gitignore",
+    "commit": "cz",
+    "prepare": "is-ci || husky install"
   },
   "publishConfig": {
     "access": "public"
@@ -31,7 +37,30 @@
   },
   "keywords": [],
   "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@types/react": "^16.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.0.0",
+    "eslint-plugin-jest-dom": "^4.0.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "^5.0.4",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^12.3.1",
+    "prettier": "2.5.1",
     "tsup": "^6.2.3",
     "typescript": "^4.8.2"
   },
@@ -41,5 +70,10 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

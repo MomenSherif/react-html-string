@@ -10,7 +10,6 @@ export default defineConfig(options => ({
   format: options.watch ? 'esm' : ['esm', 'cjs'],
   external: Object.keys(dependencies).concat(Object.keys(peerDependencies)),
   outExtension({ format }) {
-    console.log({ format });
     return {
       js: `.${format}.js`,
     };
