@@ -37,7 +37,14 @@
     "url": "https://github.com/MomenSherif/react-html-string/issues",
     "email": "momensherif.2019@gmail.com"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "html",
+    "htmlparser",
+    "react html string",
+    "inner html",
+    "dangerouslySetInnerHTML"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
