@@ -6,7 +6,7 @@ export default defineConfig(options => ({
   outDir: 'dist',
   sourcemap: false,
   clean: true,
-  dts: !options.watch,
+  dts: true,
   format: options.watch ? 'esm' : ['esm', 'cjs'],
   external: Object.keys(dependencies).concat(Object.keys(peerDependencies)),
   outExtension({ format }) {
