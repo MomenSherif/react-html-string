@@ -40,5 +40,5 @@ export default function HTMLString({
     [html, parserOptions],
   );
 
-  return content;
+  return <>{content}</>;
 }

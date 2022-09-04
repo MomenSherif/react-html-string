@@ -27,7 +27,9 @@
     "@typescript-eslint/no-unused-vars": "error",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "react/require-default-props": "off",
-    "react/no-unstable-nested-components": ["error", { "allowAsProps": true }]
+    "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-props-no-spreading": "off"
   },
   "overrides": [
     {
